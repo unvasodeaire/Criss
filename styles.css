@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ff69b4, #ff1493, #db7093);
+    font-family: 'Dancing Script', cursive;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+h1 {
+    color: #c71585;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pareja-img {
+    width: 250px;
+    filter: drop-shadow(0 0 10px rgba(199, 21, 133, 0.4));
+    margin: 1rem 0;
+}
+
+.botones {
+    margin: 2rem 0;
+    position: relative;
+}
+
+button {
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Dancing Script', cursive;
+}
+
+#btnSi {
+    background: #ff69b4;
+    color: white;
+}
+
+#btnSi:hover {
+    background: #ff1493;
+    transform: scale(1.1);
+}
+
+#btnNo {
+    background: #f0f0f0;
+    color: #555;
+    position: absolute;
+}
+
+.respuesta {
+    display: none;
+    color: #c71585;
+    font-size: 1.5rem;
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.corazon-animado {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url('https://i.imgur.com/5WY7RgX.png') no-repeat center/contain;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .pareja-img {
+        width: 200px;
+    }
+}
